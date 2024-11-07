@@ -1,10 +1,33 @@
-This project implements an artificial neural network (ANN) classifier for recognizing the author of Polish handwritten text using the HPT (Handwritten Polish Text) dataset. The model is trained using backpropagation to classify handwritten samples into one of eight authors.
+🤖 AI Author Recognition for Polish Handwritten Text ✍️
+This project implements an Artificial Neural Network (ANN) for author recognition of Polish handwritten text using the HPT (Handwritten Polish Text) dataset. The model utilizes Convolutional Neural Networks (CNNs) trained with backpropagation to classify handwriting samples into different authors.
 
+🚀 Features:
+Preprocessing: Converts images to grayscale, resizes, and normalizes.
+Model: CNN architecture with convolutional, pooling, and dense layers.
+Training: Uses Adam optimizer and sparse categorical cross-entropy loss.
+Evaluation: Accuracy evaluation on the test dataset.
+📦 Installation
+Clone the repository:
 
-Data Preparation: Handwritten text images are preprocessed by converting to grayscale, cropping words based on bounding box coordinates, resizing them, and converting them back to RGB format.
+bash
+Copy code
+git clone https://github.com/MaksPek03/AI_author_recognition.git
+cd AI_author_recognition
+Install dependencies:
 
-Model Architecture: A Convolutional Neural Network (CNN) with multiple convolutional layers, max-pooling layers, and dense layers is used to classify the images into the corresponding authors.
+Create a virtual environment and install the necessary libraries:
 
-Training: The model is trained using the Adam optimizer and sparse_categorical_crossentropy loss function over 20 epochs, with a validation split to evaluate performance.
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use venv\Scripts\activate
+pip install -r requirements.txt
+Run the model:
 
-Evaluation: The model's accuracy is evaluated on a separate test set, providing insight into its performance in recognizing handwritten text authors.
+To train or evaluate the model, simply run:
+
+bash
+Copy code
+python main.py
+📊 Dataset
+The project uses the HPT dataset, which contains images of Polish handwritten text. You need to download and preprocess this dataset before starting the training process.
